@@ -1,0 +1,21 @@
+# Configuración de Cloudflare Pages de Nicole. El despliegue rellena database_id y ADMIN_EMAIL (ver GUIA_DESPLIEGUE.md).
+name = "nicole"
+pages_build_output_dir = "public"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nicole"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# Adjuntos de las demandas (presentaciones, estimaciones, diseños, alcances). Sin R2 se guardan en D1 hasta 1,5 MB.
+[[r2_buckets]]
+binding = "ADJUNTOS"
+bucket_name = "nicole-adjuntos"
+
+[vars]
+ADMIN_EMAIL = "rodestrafa@gmail.com"
+
+# Workers AI: Whisper para pasar audio a texto y un modelo abierto para rellenar la demanda (gratis dentro del cupo diario)
+[ai]
+binding = "AI"
