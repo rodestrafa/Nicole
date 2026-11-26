@@ -1,0 +1,13 @@
+{
+  "name": "nicole",
+  "private": true,
+  "type": "module",
+  "description": "Nicole: demanda de innovación (PoCs, implementaciones, demos), en Cloudflare Pages + D1",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "desplegar": "./scripts/desplegar.sh"
+  },
+  "devDependencies": {
+    "wrangler": "4.148.0"
+  }
+}
